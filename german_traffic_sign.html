@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"></link>
+    </head>
+    <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">FMI Data Index</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">CV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">NLP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Audio</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>       
+    <div class='container' style="margin-top:2em;">
+        <center><h1>The German Traffic Sign Benchmark</h1></center>
+        <center><a href="http://benchmark.ini.rub.de/?section=gtsrb&subsection=about" target="_blank">http://benchmark.ini.rub.de/?section=gtsrb&subsection=about</a></center>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Overview</font></h2>
+        </div>
+        <div class="col">
+            <p>The german traffic sign benchmark dataset consists of over 50 000 image samples presenting more than 40 types of traffic signs (thus, 40 classes), alongside semi-automatic annotations. Each image contains exactly one traffic sign, with a border of about 5 pixels around to allow edge-based detection.</p>
+            <p>The actual traffic sign is not necessarily centered within the image.This is true for images that were close to the image border in the full camera image.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Associated Paper or Article</font></h2>
+        </div>
+        <div class="col">
+            <p>More information can be found by reading <a href="https://www.sciencedirect.com/science/article/abs/pii/S0893608012000457?via%3Dihub" target="_blank">Man vs. computer: Benchmarking machine learning algorithms for traffic sign recognition</a>.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Annotations</font></h2>
+        </div>
+        <div class="col">
+            <div style="padding-right:300px; padding-top:8px;float:right">
+                <img src="./static/images/GT-Example.png" width="180" height="179">
+            </div>
+            <ul>
+                <li> <strong>Filename</strong>: Filename of corresponding image</li>
+                <li><strong>Width</strong>: Width of the image</li>
+                <li><strong>Height</strong>: Height of the image</li>
+                <li> <strong>ROI.x1</strong>: X-coordinate of top-left corner of
+                    traffic sign bounding box</li>
+                <li> <strong>ROI.y1</strong>: Y-coordinate of top-left corner of
+                    traffic sign bounding box</li>
+                <li><strong>ROI.x2</strong>: X-coordinate of bottom-right corner
+                    of traffic sign bounding box</li>
+                <li> <strong>ROI.y2</strong>: Y-coordinate of bottom-right corner
+                    of traffic sign bounding box</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Download</font></h2>
+        </div>
+        <div class="col">
+            <p>The dataset can be downloaded <a href="https://sid.erda.dk/public/archives/daaeac0d7ce1152aea9b61d9f1e19370/published-archive.html" target="_blank">here</a>.</p>
+            <p>Additional Python code for reading all images can be accessed <a href="http://benchmark.ini.rub.de/Dataset/GTSRB_Python_code.zip">here</a>.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Model</font></h2>
+        </div>
+        <div class="col">
+            <p>A trained model can be found <a href="http://benchmark.ini.rub.de/Dataset/tsr-analysis-src.zip">here</a>. Please also read the <a href="http://benchmark.ini.rub.de/content/readme.txt">README file</a>.</p>
+            <p>The authors note that the code is platform-independent, however, it has only been tested Visual Studio. So there might be a couple of issues left where GCC is more strict than Visual Studio. We appreciate any comments, patches and bug reports. The code uses CMake, an open-source, cross-platform build system which allows you to generate project files/makefiles for your preferred compiler toolchain.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Benchmarks</font></h2>
+        </div>
+        <div class="col">
+            <p>The official benchmark can be consulted <a href="http://benchmark.ini.rub.de/?section=gtsrb&subsection=results&subsubsection=official" target="_blank">here</a>.</p>
+            <p></p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Associated Challenges</font></h2>
+        </div>
+        <div class="col">
+            <p>This dataset has been associated with the IJCNN 2011 competition (1st stage).</p>
+            <p>The competition results can be consulted <a href="http://benchmark.ini.rub.de/?section=gtsrb&subsection=results&subsubsection=ijcnn" target="_blank">here</a>.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>License</font></h2>
+        </div>
+        <div class="col">
+            <p>No license found.</p>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"></link>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+                integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">FMI Data Index</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./cv_list.html">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">NLP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Audio</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <div class='container' style="margin-top:2em;">
+            <center><h1>Face Forensics++ Benchmark Dataset</h1></center>
+            <center><a href="https://github.com/ondyari/faceforensics" target="_blank">https://github.com/ondyari/faceforensics</a></center>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Overview</font></h2>
+            </div>
+            <div class="col">
+                <p>FaceForensics++ is a forensics dataset consisting of 1000 original video sequences that have been manipulated with four automated face manipulation methods: Deepfakes, Face2Face, FaceSwap and NeuralTextures. The data has been sourced from 977 youtube videos and all videos contain a trackable mostly frontal face without occlusions which enables automated tampering methods to generate realistic forgeries. As we provide binary masks the data can be used for image and video classification as well as segmentation. In addition, we provide 1000 Deepfakes models to generate and augment new data.</p>
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+                <div class="col" style="background:rgb(64, 147, 214);">
+                    <h2><font color='white'>Associated Paper or Article</font></h2>
+                </div>
+                <div class="col">
+                    <p> More information can be found by reading <a href="https://arxiv.org/abs/1901.08971" target="_blank">FaceForensics++: Learning to Detect Manipulated Facial Images</a>.</p>
+                </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+                <div class="col" style="background:rgb(64, 147, 214);">
+                    <h2><font color='white'>Download</font></h2>
+                </div>
+                <div class="col">
+                    <p>If you would like to download the FaceForensics++ dataset, please fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSdRRR3L5zAv6tQ_CKxmK4W96tAab_pfBu2EKAgQbeDVhmXagg/viewform">this google form</a> and, once accepted, we will send you the link to our download script. If you have not received a response within a week, it is likely that your email is bouncing - please check this before sending repeat requests.</p>
+                    <p>Once, you obtain the download link, please head to the <a href="https://github.com/ondyari/FaceForensics/blob/master/dataset/README.md">download section</a>. You can also find details about the generation of the dataset there.</p>
+                </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+                <div class="col" style="background:rgb(64, 147, 214);">
+                    <h2><font color='white'>Model</font></h2>
+                </div>
+                <div class="col">
+                    <p>XceptionNet from the associated paper trained on FaceForensics++ dataset. </p>
+                    <p>Besides the full image models, all models were trained on slightly enlarged face crops with a scale factor of 1.3. The models were trained using the Face2Face face tracker, though the detect_from_models.py file uses the freely available dlib face detector.</p>
+                    <p>More information on the classification model can be found <a href="https://github.com/ondyari/FaceForensics/tree/master/classification" target="_blank">here</a>. Please check requirements.txt that can be found by accessing the link and make sure you have Python 3.6 installed on your machine.</p>
+                </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+                <div class="col" style="background:rgb(64, 147, 214);">
+                    <h2><font color='white'>Benchmarks</font></h2>
+                </div>
+                <div class="col">
+                    <p>An automated benchmark for this dataset can be found <a href="http://kaldir.vc.in.tum.de/faceforensics_benchmark/" target="_blank">here</a>. This benchmark is for facial manipulation detection on the presence of compression based on our manipulation methods that contains 1000 images.</p>
+                </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Size</font></h2>
+            </div>
+            <div class="col">
+                <p>The original downladed source videos from youtube: 38.5GB.</p>
+                <p>All h264 compressed videos with compression rate factor.</p>
+                <ul>
+                    <li>raw/0: ~500GB</li>
+                    <li>23: ~10GB</li>
+                    <li>40: ~2GB</li>
+                </ul>
+                <p>All raw extracted images as pngs: ~2TB</p>
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+                <div class="col" style="background:rgb(64, 147, 214);">
+                    <h2><font color='white'>Associated Challenges</font></h2>
+                </div>
+                <div class="col">
+                    <p>No associated challenges have been found in regard to this dataset.</p>
+                </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Licence</font></h2>
+            </div>
+            <div class="col">
+                <p>The dataset is licenced under <a href="http://kaldir.vc.in.tum.de/faceforensics_tos.pdf" target="_blank">Face Forsenics Terms of Use</a> and the code is licenced under the <a href="https://opensource.org/licenses/MIT">MIT licence</a>.</p>
+            </div>
+        </div>
+    </body>
+</html>

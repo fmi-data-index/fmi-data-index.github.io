@@ -1,0 +1,21 @@
+(specific) instance object recognition
+
+!!! de vazut adnotari cel mai important !!!
+
+Orbject Instance Recognition: datasetlists.com
+
+1. Despre DB.
+
+2. Overview: cate imagini are, train/test scores.
+
+3. Datasets cu obiecte specifice (tip landmarks din Google Landmarks), in special date visuale.
+
+4. Template:
+
+-> problema.
+
+-> cate imagini, cate adnotari, ce fel de adnotari.
+
+5. De descarcat bazele de date si de analizat adnotarile ca template-ul sa fie cat mai exhaustiv.
+
+6. De descarcat si analizat Google Landmarks V2 & V2!!!

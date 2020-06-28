@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"></link>
+    </head>
+    <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">FMI Data Index</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">CV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">NLP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Audio</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>       
+    <div class='container' style="margin-top:2em;">
+        <center><h1>xBD</h1></center>
+        <center><a href="https://xview2.org/dataset" target="_blank">https://xview2.org/dataset</a></center>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Overview</font></h2>
+        </div>
+        <div class="col">
+            <p>Using imagery from Maxar's Open Data Program, the dataset boasts over 850 000  building polygons from six different types of natural disaster around the world, covering a total area of over 45,000 square kilometers, being one of the largest and highest quality public datasets of annotated high-resolution satellite imagery.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Associated Paper or Article</font></h2>
+        </div>
+        <div class="col">
+            <p>For more information please read <a href="https://arxiv.org/abs/1911.09296" target="_blank">xBD: A Dataset for Assessing Building Damage from Satellite Imagery</a>.</p>    
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Annotations</font></h2>
+        </div>
+        <div class="col">
+            <p>Each image has an associated JSON file containing an array. Each array element contains metadata, information regarding the type of damage assesed and an string array of polygon coordinates for the bounding polygon, as seen below:</p>    
+            <img src="./static/images/xbd_annot.png" height="335px">
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Download</font></h2>
+        </div>
+        <div class="col">
+            <p>In order to download the dataset, you first need to create an account on the official website. After that you will be redirected to a webpage with the download link.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Model</font></h2>
+        </div>
+        <div class="col">
+            <p>No official model has been found for this dataset.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Benchmarks</font></h2>
+        </div>
+        <div class="col">
+            <p>No official benchmarks have been found for this dataset. The challenge results are not public yet either.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Associated Challenges</font></h2>
+        </div>
+        <div class="col">
+            <p>This dataset is associated with the Localize and Score Damage challenge. You need to create an account and log in on the official website in order to view challenge details.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>License</font></h2>
+        </div>
+        <div class="col">
+            <p>Dataset licenced under a Non-Commercial licence.</p>
+        </div>
+    </div>
+    </body>
+</html>

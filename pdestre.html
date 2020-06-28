@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"></link>
+    </head>
+    <body>
+    <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">FMI Data Index</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">NLP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Audio</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>       
+        <div class='container' style="margin-top:2em;">
+            <center><h1>P-DESTRE</h1></center>
+            <center><a href="http://p-destre.di.ubi.pt/index.html" target="_blank">http://p-destre.di.ubi.pt/index.html</a></center>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Overview</font></h2>
+            </div>
+            <div class="col">
+                <p>P-DESTRE is a multi-session dataset of videos of pedestrians in outdoor public environments, fully annotated at the frame level by providing one text file for each video file.</p>
+                <p>The data has been acquired via drones that were flying at between 5.5 and 6.7 meters height, with the camera pitch angles varying between 45º to 90º. Volunteers were mostly in the 18-24 age interval (> 90%), roughly divided into two halves for gender (approx 65% males), and ethnicity (”white” and ”Indian”). About 28% of the volunteers were using glasses, 10% of these were using sunglasses. Data were recorded at 30fps, with 4K spatial resolution (3,840 × 2,160), and stored in ”mp4” format, with H.264 compression.</p>
+                <p>The P-DESTRE datset has been contructed to help accomplish 4 tasks: pedestrian identification, pedestrian tracking, pedestrial re-identification and pedestrian search.</p>
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Associated Paper or Article</font></h2>
+            </div>
+            <div class="col">
+                <p>No associated paper or article found.</p>    
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Annotations</font></h2>
+            </div>
+            <div class="col">
+                <p>The annotation protocol is as following:</p>
+                <table width="100%" cellspacing="2" cellpadding="2" border="1">
+                    
+                  <tbody>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>Attribute<br>
+                          </b></span></td>
+                      <td valign="top"><b><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Values</span></b></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Frame</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0</b>,<b>1</b>,....</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">ID</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0</b>,<b>1</b>,...</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Bounding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          Box<br>
+                        </span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>x</b>,
+                          <b>y</b>, <b>h</b>, <b>w</b> (Top left
+                          column, top left row, height, width)<br>
+                        </span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Head
+
+                          Pose<br>
+                        </span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>flag</b>,
+                          <b>yaw</b>, <b>pitch</b>, <b>roll</b>
+                          (flag=-1: "<font color="#ff0000">Not available</font>",
+
+                          flag=1: <font color="#003300">"Available</font>")
+
+                          yaw, pitch and roll given in degrees<br>
+                        </span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Gender<br>
+                        </span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:</b>
+                          Male, <b>1:</b> Female, <b>2:</b> Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Age</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>0-11,</span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>
+                              1:</b></span> 12-17, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:</b></span>
+                          18-24, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>25-34, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>35-44, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>5:
+
+
+
+
+
+
+
+
+
+                            </b></span>45-54, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>6:</b></span>
+                          55-64, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>7:
+
+
+
+
+
+
+
+
+
+                            </b></span>&gt;65, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>8:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Height</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Child, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Short, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Medium, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Tall, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Body
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          Volume (Weight)<br>
+                        </span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Thin, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:</b></span>
+                          Medium, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Fat, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Ethnicity</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>White, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Black, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Asian, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Indian, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Hair
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          Color<br>
+                        </span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Black, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Brown, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>White, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Red, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>Gray, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>5:
+
+
+
+
+
+
+
+
+
+                            </b></span>Occluded, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>6:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Hairstyle</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Bald, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Short, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Medium, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Long, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>Horse Tail, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>5:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Beard</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Yes, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>No, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Moustache</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Yes, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>No, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Glasses</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Normal glass, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Sun glass, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>No, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Head
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          Accessories<br>
+                        </span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Hat, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Scarf, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Neckless, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Cannot see, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Upper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          Body Clothing<br>
+                        </span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>T Shirt, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Blouse, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Sweater, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Coat, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>Bikini, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>5:
+
+
+
+
+
+
+
+
+
+                            </b></span>Naked, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>6:
+
+
+
+
+
+
+
+
+
+                            </b></span>Dress, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>7:
+
+
+
+
+
+
+
+
+
+                            </b></span>Uniform, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>8:
+
+
+
+
+
+
+
+
+
+                            </b></span>Shirt, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>9:
+
+
+
+
+
+
+
+
+
+                            </b></span>Suit, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>10:
+
+
+
+
+
+
+
+
+
+                            </b></span>Hoodie, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>11:</b></span>
+                          Cardigan, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>12:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Lower
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                          Body Clothing<br>
+                        </span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Jeans, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Leggins, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Pants, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Shorts, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>Skirt, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>5:
+
+
+
+
+
+
+
+
+
+                            </b></span>Bikini, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>6:
+
+
+
+
+
+
+
+
+
+                            </b></span>Dress, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>7:
+
+
+
+
+
+
+
+
+
+                            </b></span>Uniform, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>8:
+
+
+
+
+
+
+
+
+
+                            </b></span>Suit, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>9:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Feet</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Sport Shoe, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Classic Shoe, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>High Heels, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Boots, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>Sandal, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>5:
+
+
+
+
+
+
+
+
+
+                            </b></span>Nothing, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>6:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Accessories</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Bag, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Backpack Bag, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Rolling Bag, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Umbrella, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>Sport Bag, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>5:
+
+
+
+
+
+
+
+
+
+                            </b></span>Market Bag, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>6:
+
+
+
+
+
+
+
+
+
+                            </b></span>Nothing, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>7:
+
+
+
+
+
+
+
+
+
+                            </b></span>Unknown</span></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D">Action</span></td>
+                      <td valign="top"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>0:
+
+
+
+
+
+
+
+
+
+                            </b></span>Walking, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>1:
+
+
+
+
+
+
+
+
+
+                            </b></span>Running, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>2:
+
+
+
+
+
+
+
+
+
+                            </b></span>Standing, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>3:
+
+
+
+
+
+
+
+
+
+                            </b></span>Sitting, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>4:
+
+
+
+
+
+
+
+
+
+                            </b></span>Cycling, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>5:</b></span>Exercising,
+
+
+
+
+
+
+
+
+
+                        </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>6:
+
+
+
+
+
+
+
+
+
+                            </b></span>Petting, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>7:
+
+
+
+
+
+
+
+
+
+                            </b></span>Talking over the Phone, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>8:
+
+
+
+
+
+
+
+
+
+                            </b></span>Leaving Bag, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>9:
+
+
+
+
+
+
+
+
+
+                            </b></span>Fall, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>10:
+
+
+
+
+
+
+
+
+
+                            </b></span>Fighting, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>11:
+
+
+
+
+
+
+
+
+
+                            </b></span>Dating, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>12:
+
+
+
+
+
+
+
+
+
+                            </b></span>Offending, </span><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><span style="font-size:10.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#17365D"><b>13:
+
+
+
+
+
+
+
+
+
+                            </b></span>Trading</span></td>
+                    </tr>
+                  </tbody>
+                
+                </table>
+                <p></p>    
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Download</font></h2>
+            </div>
+            <div class="col">
+                <p>The dataset can be downloaded <a href="http://socia-lab.di.ubi.pt/%7Ehugomcp/dataset.tar" target="_blank">here</a>.</p>
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Model</font></h2>
+            </div>
+            <div class="col">
+                <p>Please check the <b>Bechmarks</b> section.</p>
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Benchmarks</font></h2>
+            </div>
+            <div class="col">
+                <p>Benchmarks for all four tasks can be consulted <a href="http://p-destre.di.ubi.pt/experiments.html" target="_blank">here</a>.</p>
+                <p>The benchmarks also specify the models used, their hyperparameters and the train-validation-test split methodology.</p>
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Associated Challenges</font></h2>
+            </div>
+            <div class="col">
+                <p>No associated challenges have been found.</p>
+           </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>License</font></h2>
+            </div>
+            <div class="col">
+                <p>Dataset licensed under the CC-BY-NC-SA 4.0 license.</p>
+            </div>
+        </div>
+    </body>
+</html>

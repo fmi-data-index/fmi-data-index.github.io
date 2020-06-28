@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"></link>
+    </head>
+    <body>
+    <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">FMI Data Index</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">NLP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Audio</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>       
+        <div class='container' style="margin-top:2em;">
+            <center><h1>TACO: Trash Annotations in Context</h1></center>
+            <center><a href="http://tacodataset.org/" target="_blank">http://tacodataset.org/</a> | <a href="https://github.com/pedropro/TACO">https://github.com/pedropro/TACO</a></center>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Overview</font></h2>
+            </div>
+            <div class="col">
+                <p>TACO is an open image dataset of waste in the wild. It contains photos of litter taken under diverse environments, from tropical beaches to London streets. These images are manually labeled and segmented according to a hierarchical taxonomy to train and evaluate object detection algorithms.</p>
+                <p>The dataset currently has 715 images with 2152 annotations and 3167 new images that need to be annotated. These annotations are labeled in 60 categories which belong to 28 super (top) categories. The data is annotated in the <a href="http://cocodataset.org/#home">COCO</a> format.</p>
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+                <div class="col" style="background:rgb(64, 147, 214);">
+                    <h2><font color='white'>Associated Paper or Article</font></h2>
+                </div>
+                <div class="col">
+                    <p>No assiciated paper or article has been found in regard to this dataset.</p>
+                </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Annotations</font></h2>
+            </div>
+            <div class="col">
+                <p>The data has been annotated using bounding boxes, object segmentation, background annotation and object context tag.</p>
+                <p>You can find the COCO annotation template <a href="http://www.immersivelimit.com/tutorials/create-coco-annotations-from-scratch">here</a>.</p>
+                <p>For more information regarding the classes used in annotating the data we suggest consulting the <a href="http://tacodataset.org/stats">annotation stats</a> and <a href="http://tacodataset.org/taxonomy">taxonomy</a> webpages.</p>
+                <p>Sample annotated image:</p>
+                <div class="text-center">
+                    <img src="./static/images/taco_sample.png" class="img-responsive"/>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+                <div class="col" style="background:rgb(64, 147, 214);">
+                    <h2><font color='white'>Download</font></h2>
+                </div>
+                <div class="col">
+                    <p>Information regarding download can be found on the dataset's <a href="https://github.com/pedropro/TACO">official github repo</a>.</p>
+                </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+                <div class="col" style="background:rgb(64, 147, 214);">
+                    <h2><font color='white'>Model</font></h2>
+                </div>
+                <div class="col">
+                    <p>No associated model has been provided.</p>
+                </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+                <div class="col" style="background:rgb(64, 147, 214);">
+                    <h2><font color='white'>Benchmarks</font></h2>
+                </div>
+                <div class="col">
+                    <p>No benchmarks have been provided.</p>
+                </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+                <div class="col" style="background:rgb(64, 147, 214);">
+                    <h2><font color='white'>Associated Challenges</font></h2>
+                </div>
+                <div class="col">
+                    <p>No associated challenges found in regard to this dataset.</p>
+                </div>
+        </div>
+        <div class="container" style="margin-top:2em;">
+            <div class="col" style="background:rgb(64, 147, 214);">
+                <h2><font color='white'>Licence</font></h2>
+            </div>
+            <div class="col">
+                <p>The dataset is licenced under the <a href="https://creativecommons.org/licenses/by/4.0/">CC By 4.0</a> licence.</p>
+            </div>
+        </div>
+    </body>
+</html>

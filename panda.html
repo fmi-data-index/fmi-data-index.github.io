@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"></link>
+    </head>
+    <body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">FMI Data Index</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">CV</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">NLP</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Audio</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>       
+    <div class='container' style="margin-top:2em;">
+        <center><h1>PANDA</h1></center>
+        <center><a href="http://www.panda-dataset.com/index.html" target="_blank">http://www.panda-dataset.com/index.html</a></center>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Overview</font></h2>
+        </div>
+        <div class="col">
+            <p>PANDA is the first gigapixel-level human-centric video dataset, for large-scale, long-term, and multi-object visual analysis. The videos in PANDA were captured by a gigapixel camera and cover real-world large-scale scenes with both wide field-of-view (~1km^2 area) and high resolution details (~gigapixel-level/frame). The scenes may contain 4k head counts with over 100× scale variation. PANDA provides enriched and hierarchical ground-truth annotations, including 15,974.6k bounding boxes, 111.8k fine-grained attribute labels, 12.7k trajectories, 2.2k groups and 2.9k interactions.</p>
+            <p>Depending on the data type, the PANDA dataset is split into 2 sub-sets: PANDA-Image and PANDA-Video. Among them, PANDA-Image is composed of 555 static giga-pixel images (390 for training, 165 for testing), and PANDA-Video is composed of 15 giga-pixel video sequences (10 videos for training, 5 videos for testing).</p>
+            <p>Since existing video compression formats such as H264 cannot handle the extremely high resolution of the PANDA dataset, the videos in panda-video are split into image frames (.jpg format ) for storage. Moreever, from the point of view of data storage and download, in order to make the total volume of data not too large, we take time sampling on the videos and the frame rate of the videos is 2 FPS.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Associated Paper or Article</font></h2>
+        </div>
+        <div class="col">
+            <p>For more information please read <a href="https://arxiv.org/abs/2003.04852" target="_blank">PANDA: A Gigapixel-level Human-centric Video Dataset</a>.</p>    
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Annotations</font></h2>
+        </div>
+        <div class="col">
+            <h5><b>Image annotations</b></h5>
+            <p>The two files human_bbox_train.json and vehicle_bbox_train.json respectively contain the annotations of the pedestrians and vehicles in the images for training set. human_bbox_test.json and vehicle_bbox_test.json only contain image_filepath, image id and image size for testing set. Please note that for the results on the test set to submit, the image id should be the same as in the annotation file.</p>    
+            <p>The annotation structure for people is as follows:</p>
+            <img src="./static/images/panda_image_human_annot.png" height="700px">
+            <ul>
+                <li>image_filepath is the relative path of the image;</li>
+                <li>"category" is the key that determines whether the target box is a pedestrian or a special area that needs to be ignored. A pedestrian can only be "person";</li>
+                <li>"riding type" is not "null" only if "category" is "riding";</li>
+                <li>"x" and "y" are floating point numbers between 0 and 1, representing the ratio of the coordinates to the width and height of the image, respectively.</li>
+            </ul>
+            <p>The annotation structure for vehicles is as follows:</p>
+            <img src="./static/images/panda_image_vehicle_annot.png" height="500px">
+            <ul>
+                <li>image_filepath is the relative path of the image;</li>
+                <li>"vehicles"refers to a dense vehicle group and should be ignored;</li>
+                <li>"small car", "midsize car" and "large car" belong to motor vehicles with four or more wheels and are distinguished by vehicle size. "electric car" refers to an electric sightseeing car or patrol car, etc.;</li>
+                <li>"x" and "y" are floating point numbers between 0 and 1, representing the ratio of the coordinates to the width and height of the image, respectively.</li>
+            </ul>
+            <h5><b>Video annotaitons</b></h5>
+            <p>The annotation files for each video sequence in PANDA-Video include two: tracks.json and seqinfo.json respectively contain the pedestrian trajectory annotation and the basic information of the video sequence. The annotation file for each video sequence is stored in a folder named after the scene name.</p>
+            <p>The annotation structure is as follows:</p>
+            <img src="./static/images/panda_video_annot.png" height="400px">
+            <ul>
+                <li>both "frame id" and "track id" count from 1;</li>
+                <li>in "face orientation", "front" means facing the camera;</li>
+                <li>in "occlusion", "normal" means the occlusion rate is less than 10%, "hide" means the occlusion rate is between 10% and 50%, "serious hide" means the occlusion rate is greater than 50%, and "disappear" means the object completely disappears;</li>
+                <li>"x" and "y" are floating point numbers between 0 and 1, representing the ratio of the coordinates to the width and height of the image, respectively.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Download</font></h2>
+        </div>
+        <div class="col">
+            <p>In order to download the PANDA dataset, you must mail <b>zhang-xy18@mails.tsinghua.edu.cn</b> and use the following template:</p>
+            <img src="./static/images/panda_mail_template.png" height="180px">
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Model</font></h2>
+        </div>
+        <div class="col">
+            <p>No offical models have been provided for this dataset.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Benchmarks</font></h2>
+        </div>
+        <div class="col">
+            <p>No official benchmarks have been provided for this dataset.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>Associated Challenges</font></h2>
+        </div>
+        <div class="col">
+            <p>This dataset is associated with the <a href="http://www.panda-dataset.com/eccv-tasks.html" target="_blank">ECCV 2020</a> challenge.</p>
+        </div>
+    </div>
+    <div class="container" style="margin-top:2em;">
+        <div class="col" style="background:rgb(64, 147, 214);">
+            <h2><font color='white'>License</font></h2>
+        </div>
+        <div class="col">
+            <p>Dataset licensed under the CC-BY-NC-SA 4.0 license.</p>
+        </div>
+    </div>
+    </body>
+</html>
